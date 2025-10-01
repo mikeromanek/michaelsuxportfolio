@@ -1,0 +1,32 @@
+# Ignore the real .git directory (git stores metadata in .git/ directory)
+.git/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Node (if you ever add a node-based toolchain)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code
+.vscode/
+
+# Editor temp files
+*~
+*.swp
+
+# Environment files
+.env
+
+# Sass cache
+.sass-cache/
+
+# Build outputs (common names)
+dist/
+build/
+
+# Mac resource forks
+._*
