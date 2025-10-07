@@ -204,6 +204,35 @@ header nav ul li a:hover {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+/* A reusable class for thumbnails that should not be cropped.
+  Use on <img class="thumbnail-contain"> to keep the whole image visible
+  inside the card while preserving aspect ratio. */
+.thumbnail-contain {
+  -o-object-fit: contain;
+    object-fit: contain;
+  object-position: center;
+  background-color: #fff; /* neutral background when aspect ratios differ */
+}
+
+/* Wrapper to force consistent thumbnail sizing and centering */
+.thumbnail-wrapper {
+  height: 320px; /* match card image height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.thumbnail-wrapper img {
+  /* Allow the image to scale but never exceed container */
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+}
 .projects .project-card h3 {
   text-align: center;
   margin: 1rem 0 0.5rem;
